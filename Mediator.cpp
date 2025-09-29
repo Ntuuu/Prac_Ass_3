@@ -9,8 +9,28 @@ std::list<Users*>* ChatRoom::getUsers(){
     return users;
 }
 
+std::list<std::string*>* ChatRoom::getChatHistory(){
+    return chatHistory;
+}
+
+
 int ChatRoom::getNumUsers(){
     return numUsers;
+}
+
+void ChatRoom::sendMessage(std::string message, Users fromUser){
+    std::cout << "User: " << fromUser.toString() << " sent:\n";
+    std::cout << message;
+
+}
+
+void ChatRoom::saveMessage(std::string message, Users fromUser){
+    
+    //std::string* saveMessage = &message;
+    std::string messageToSave = fromUser + " sent " + message;
+
+    getChatHistory()->push_back(&messageToSave);
+    
 }
 
 // void ChatRoom::sendMessage(std::string message, Users fromUser){

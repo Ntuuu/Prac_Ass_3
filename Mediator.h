@@ -72,11 +72,25 @@ public:
      */
     int getNumUsers();
 
+    std::list<Users*>* getChatHistory();
+
+    friend std::ostream& operator<<(std::ostream& os, const Users& userName) {
+        os << userName;
+        return os;
+    }
+
+     std::string toString() const {
+        std::stringstream ss;
+        ss << *this;
+        return ss.str();
+    }
+
+
 private:
 
     std::list<Users*>* users;    /**< List of users in the chat room. */
     int numUsers = 0;            /**< Number of registered users. */
-    std::string* chatHistory;    /**< Storage for chat history. */
+    std::list<std::string*>* chatHistory;    /**< Storage for chat history. */
 };
 
 /**
