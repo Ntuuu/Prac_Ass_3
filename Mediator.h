@@ -114,7 +114,7 @@ public:
      * 
      * @param command The command to be added.
      */
-    void addCommand(Command command);
+    void addCommand(Command* command);
 
     /**
      * @brief Executes all commands in the user's command queue.
@@ -132,7 +132,7 @@ protected:
 
     std::list<ChatRoom*> chatRooms;   /**< Reference to the chat room(s) the user is part of. */
     std::string name;      /**< The user’s display name. */
-    Command* commandQueue; /**< Queue of commands for this user. */
+    std::list<Command*> commandQueue; /**< Queue of commands for this user. */
 };
 
 /**

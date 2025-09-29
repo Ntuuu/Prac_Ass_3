@@ -22,9 +22,7 @@ class SendMessageCommand : public Command {
             this->fromUser = fromUser;
             this->message = message;
         }
-        void execute() override {
-            chatRoom->sendMessage(message, *fromUser);
-        }
+        void execute() override;
 };
 
 class LogMessageCommand : public Command {
@@ -34,7 +32,17 @@ class LogMessageCommand : public Command {
             this->fromUser = fromUser;
             this->message = message;
         }
-        void execute() override {
-            chatRoom->saveMessage(message, *fromUser);
-        }   
+        void execute() override;
 };
+
+// class CreateUserCommand : public Command {
+//     private:
+//         std::list<ChatRoom*> chatRooms;
+//         std::string userName;
+//     public:
+//         CreateUserCommand(std::list<ChatRoom*> chatRooms, const std::string& userName) {
+//             this->chatRooms = chatRooms;
+//             this->userName = userName;
+//         }
+//         void execute() override;
+// };

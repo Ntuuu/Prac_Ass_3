@@ -57,9 +57,28 @@ std::string Users::getName(){
 }
 
 
+// void Users::send(std::string message, ChatRoom* room){
+//     room->sendMessage(message, *this);
+//     room->saveMessage(message, *this);
+// }
+
+void Users::addCommand(Command* command){
+    commandQueue.push_back(command);
+}
+void Users::executeAll(){
+    for(Command* cmd : commandQueue){
+        cmd->execute();
+    }
+    commandQueue.clear();
+}
+
 void Users::send(std::string message, ChatRoom* room){
-    room->sendMessage(message, *this);
-    room->saveMessage(message, *this);
+    Command* cmd = new SendMessageCommand(room, this, message);
+    addCommand(cmd);
+    Command* logCmd = new LogMessageCommand(room, this, message);
+    addCommand(logCmd);
+
+    executeAll();
 }
 
 
