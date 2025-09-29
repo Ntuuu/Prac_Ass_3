@@ -1,28 +1,33 @@
 #include "Mediator.h"
 
+
+class Users;
+class Cat;
+class Dog;
+class CatnDog;
 class UserFactory {
 public:
-    static Users* createUser(const std::string& name) {
-        // if (name == "Cat") {
-        //     return new Cat();
-        // } else if (name == "Dog") {
-        //     return new Dog();
-        // } else if (name == "CatnDog") {
-        //     return new CatnDog();
-        // } else {
-        //     return nullptr; // or throw an exception
-        // }
-    }
+    virtual Users* createUser(std::string& name, std::list<ChatRoom*> chatRooms) = 0;
 };
 
 class CatFactory : public UserFactory {
-
+    public:
+    Users* createUser(std::string& name, std::list<ChatRoom*> chatRooms) override {
+        return new Cat(chatRooms, name);
+    }
 };
 
 class DogFactory : public UserFactory {
-
+    public:
+    Users* createUser(std::string& name, std::list<ChatRoom*> chatRooms) override {
+        return new Dog(chatRooms, name);
+    }
 };
 
+
 class CatnDogFactory : public UserFactory {
-    
+    public:
+    Users* createUser(std::string& name, std::list<ChatRoom*> chatRooms) override {
+        return new CatnDog(chatRooms, name);
+    }
 };

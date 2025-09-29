@@ -166,9 +166,14 @@ public:
      */
     void executeAll();
 
+    Users(std::list<ChatRoom*> chatRooms, std::string name) {
+        this->chatRooms = chatRooms;
+        this->name = name;
+    }
+
 protected:
 
-    ChatRoom* chatRooms;   /**< Reference to the chat room(s) the user is part of. */
+    std::list<ChatRoom*> chatRooms;   /**< Reference to the chat room(s) the user is part of. */
     std::string name;      /**< The user’s display name. */
     std::list<Command*> commandQueue; /**< Queue of commands for this user. */
 };
@@ -203,7 +208,8 @@ class CtrlCat : public ChatRoom {
  * Demonstrates how custom user types can be defined.
  */
 class Cat : public Users {
-
+    public:
+    Cat(std::list<ChatRoom*> chatRooms, std::string name) : Users(chatRooms, name) {}
 };
 
 /**
@@ -212,7 +218,8 @@ class Cat : public Users {
  * Demonstrates how custom user types can be defined.
  */
 class Dog : public Users {
-
+    public:
+    Dog(std::list<ChatRoom*> chatRooms, std::string name) : Users(chatRooms, name) {}
 };
 
 /**
@@ -221,5 +228,6 @@ class Dog : public Users {
  * Demonstrates how custom user types can be defined.
  */
 class CatnDog : public Users {
-
+    public:
+    CatnDog(std::list<ChatRoom*> chatRooms, std::string name) : Users(chatRooms, name) {}
 };
