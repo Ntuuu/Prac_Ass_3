@@ -9,63 +9,14 @@
 /**
  * @file
  * @brief Defines the ChatRoom and Users classes along with specific implementations.
- *
- * @details
- * This file declares:
- * - The abstract ChatRoom mediator
- * - The Users participant class
- * - Concrete chat room types (Dogorithm, CtrlCat)
- * - Example user subclasses (Name1, Name2, Name3)
- *
- * @uml
- * @startuml
- * 
- * class ChatRoom {
- *   +registerUser(user: Users) : void
- *   +sendMessage(message: string, fromUser: Users) : void
- *   +saveMessage(message: string, fromUser: Users) : void
- *   +removeUser(user: Users) : void
- *   +getUsers() : list<Users*>
- *   +incrementNumUsers() : int
- *   +getNumUsers() : int
- *   -users : list<Users*>
- *   -numUsers : int
- *   -chatHistory : string*
- * }
- *
- * class Users {
- *   +send(message: string, room: ChatRoom) : void
- *   +receive(message: string, fromUser: Users, room: ChatRoom) : void
- *   +addCommand(command: Command) : void
- *   +executeAll() : void
- *   -chatRooms : ChatRoom*
- *   -name : string
- *   -commandQueue : list<Command*>
- * }
- *
- * class Dogorithm
- * class CtrlCat
- * class Name1
- * class Name2
- * class Name3
- *
- * ChatRoom <|-- Dogorithm
- * ChatRoom <|-- CtrlCat
- * Users <|-- Name1
- * Users <|-- Name2
- * Users <|-- Name3
- * Users --> ChatRoom : "participates in"
- * ChatRoom --> Users : "manages *"
- *
- * @enduml
  */
 
- /**
-  * @brief Abstract base class representing a chat room mediator.
-  * 
-  * The ChatRoom defines the communication interface for users to interact.
-  * Derived classes must implement user registration and removal.
-  */
+/**
+ * @brief Abstract base class representing a chat room mediator.
+ * 
+ * The ChatRoom defines the communication interface for users to interact.
+ * Derived classes must implement user registration and removal.
+ */
 class ChatRoom {
 
 public:
@@ -75,7 +26,7 @@ public:
      * 
      * @param user The user to be registered.
      */
-    virtual void registerUser(Users user);
+    virtual void registerUser(Users user) = 0;
 
     /**
      * @brief Sends a message from one user to all others in the chat room.
@@ -98,7 +49,7 @@ public:
      * 
      * @param user The user to be removed.
      */
-    virtual void removeUser(Users user);
+    virtual void removeUser(Users user) = 0;
 
     /**
      * @brief Retrieves the list of users in the chat room.
@@ -121,7 +72,8 @@ public:
      */
     int getNumUsers();
 
-    std::list<Users*>* getChatHistory();
+    std::list<std::string*>* getChatHistory();
+
 
 
 private:
@@ -146,7 +98,7 @@ public:
      * @param message The message content.
      * @param room    The chat room where the message will be sent.
      */
-    void send(std::string message, ChatRoom room);
+    void send(std::string message, ChatRoom* room);
 
     /**
      * @brief Receives a message from another user via the chat room.
@@ -155,7 +107,7 @@ public:
      * @param fromUser The user who sent the message.
      * @param room     The chat room through which the message was sent.
      */
-    void receive(std::string message, Users fromUser, ChatRoom room);
+    void receive(std::string message, Users fromUser, ChatRoom* room);
 
     /**
      * @brief Adds a command to the user's command queue.
@@ -169,11 +121,13 @@ public:
      */
     void executeAll();
 
+    std::string getName();
+
 protected:
 
     ChatRoom* chatRooms;   /**< Reference to the chat room(s) the user is part of. */
     std::string name;      /**< The user’s display name. */
-    std::list<Command*> commandQueue; /**< Queue of commands for this user. */
+    Command* commandQueue; /**< Queue of commands for this user. */
 };
 
 /**
@@ -198,6 +152,8 @@ class CtrlCat : public ChatRoom {
      * @param user The user to be registered.
      */
     void registerUser(Users user) override;
+
+    void removeUser(Users user) override;
 };
 
 /**
@@ -205,7 +161,7 @@ class CtrlCat : public ChatRoom {
  * 
  * Demonstrates how custom user types can be defined.
  */
-class Cat : public Users {
+class Name1 : public Users {
 
 };
 
@@ -214,7 +170,7 @@ class Cat : public Users {
  * 
  * Demonstrates how custom user types can be defined.
  */
-class Dog : public Users {
+class Name2 : public Users {
 
 };
 
@@ -223,6 +179,6 @@ class Dog : public Users {
  * 
  * Demonstrates how custom user types can be defined.
  */
-class CatnDog : public Users {
+class Name3 : public Users {
 
 };
