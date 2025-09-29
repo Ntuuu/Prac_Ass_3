@@ -1,0 +1,10 @@
+<map id="SendMessageCommand" name="SendMessageCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,660,180,747"/>
+<area shape="rect" id="Node000002" href="$d5/d6a/class_command.html" title=" " alt="" coords="43,524,143,611"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,625,96,660,90,660,90,625"/>
+<area shape="rect" id="Node000003" href="$df/d67/class_chat_room.html" title="Abstract base class representing a chat room mediator." alt="" coords="17,5,169,234"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,234,85,340,86,453,90,507,84,508,81,453,79,340,83,234"/>
+<area shape="rect" id="Node000004" href="$db/d7f/class_users.html" title="Represents a user that participates in a chat room." alt="" coords="171,305,290,453"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="156,233,186,289,181,292,151,235"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="179,454,136,512,132,509,175,451"/>
+</map>

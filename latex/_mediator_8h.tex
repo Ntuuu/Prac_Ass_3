@@ -1,0 +1,55 @@
+\doxysection{Mediator.\+h File Reference}
+\hypertarget{_mediator_8h}{}\label{_mediator_8h}\index{Mediator.h@{Mediator.h}}
+
+
+Defines the \doxylink{class_chat_room}{Chat\+Room} and \doxylink{class_users}{Users} classes along with specific implementations.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}Command.\+h"{}}\newline
+Include dependency graph for Mediator.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mediator_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_chat_room}{Chat\+Room}}
+\begin{DoxyCompactList}\small\item\em Abstract base class representing a chat room mediator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_users}{Users}}
+\begin{DoxyCompactList}\small\item\em Represents a user that participates in a chat room. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dogorithm}{Dogorithm}}
+\begin{DoxyCompactList}\small\item\em A specific chat room implementation\+: \doxylink{class_dogorithm}{Dogorithm}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_ctrl_cat}{Ctrl\+Cat}}
+\begin{DoxyCompactList}\small\item\em A specific chat room implementation\+: \doxylink{class_ctrl_cat}{Ctrl\+Cat}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_name1}{Name1}}
+\begin{DoxyCompactList}\small\item\em Example user subclass\+: \doxylink{class_name1}{Name1}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_name2}{Name2}}
+\begin{DoxyCompactList}\small\item\em Example user subclass\+: \doxylink{class_name2}{Name2}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_name3}{Name3}}
+\begin{DoxyCompactList}\small\item\em Example user subclass\+: \doxylink{class_name3}{Name3}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the \doxylink{class_chat_room}{Chat\+Room} and \doxylink{class_users}{Users} classes along with specific implementations. 
+
+This file declares\+:
+\begin{DoxyItemize}
+\item The abstract \doxylink{class_chat_room}{Chat\+Room} mediator
+\item The \doxylink{class_users}{Users} participant class
+\item Concrete chat room types (\doxylink{class_dogorithm}{Dogorithm}, \doxylink{class_ctrl_cat}{Ctrl\+Cat})
+\item Example user subclasses (\doxylink{class_name1}{Name1}, \doxylink{class_name2}{Name2}, \doxylink{class_name3}{Name3})
+\end{DoxyItemize}
+
+@uml 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{inline_umlgraph_2}}
+\end{DoxyImageNoCaption}
+ 

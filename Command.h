@@ -1,4 +1,9 @@
-#include "Mediator.h"
+#pragma once
+#include <string>
+
+// Forward declarations to avoid circular include
+class ChatRoom;
+class Users;
 
 class Command {
     protected:
@@ -7,7 +12,7 @@ class Command {
         std::string message;
     public:
         virtual ~Command() {}
-        virtual void execute() = 0;
+        virtual void execute();
 };
 
 class SendMessageCommand : public Command {
@@ -18,7 +23,7 @@ class SendMessageCommand : public Command {
             this->message = message;
         }
         void execute() override {
-            chatRoom->sendMessage(*fromUser, message);
+            chatRoom->sendMessage(message, *fromUser);
         }
 };
 
@@ -30,6 +35,6 @@ class LogMessageCommand : public Command {
             this->message = message;
         }
         void execute() override {
-            chatRoom->saveMessage(*fromUser, message);
+            chatRoom->saveMessage(message, *fromUser);
         }   
 };

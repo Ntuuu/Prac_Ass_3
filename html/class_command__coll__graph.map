@@ -1,0 +1,8 @@
+<map id="Command" name="Command">
+<area shape="rect" id="Node000001" title=" " alt="" coords="31,483,131,570"/>
+<area shape="rect" id="Node000002" href="$class_chat_room.html" title="Abstract base class representing a chat room mediator." alt="" coords="5,5,157,194"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,194,74,265,73,339,74,412,78,467,73,467,69,412,67,339,69,265,72,193"/>
+<area shape="rect" id="Node000003" href="$class_users.html" title="Represents a user that participates in a chat room." alt="" coords="159,265,278,412"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="138,192,170,249,166,252,133,195"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,414,125,471,120,468,163,410"/>
+</map>

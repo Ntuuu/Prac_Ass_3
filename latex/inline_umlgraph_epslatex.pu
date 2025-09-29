@@ -1,0 +1,38 @@
+@startuml inline_umlgraph_2.eps
+class ChatRoom {
+  +registerUser(user: Users) : void
+  +sendMessage(message: string, fromUser: Users) : void
+  +saveMessage(message: string, fromUser: Users) : void
+  +removeUser(user: Users) : void
+  +getUsers() : list<Users*>
+  +incrementNumUsers() : int
+  +getNumUsers() : int
+  -users : list<Users*>
+  -numUsers : int
+  -chatHistory : string*
+}
+
+class Users {
+  +send(message: string, room: ChatRoom) : void
+  +receive(message: string, fromUser: Users, room: ChatRoom) : void
+  +addCommand(command: Command) : void
+  +executeAll() : void
+  -chatRooms : ChatRoom*
+  -name : string
+  -commandQueue : list<Command*>
+}
+
+class Dogorithm
+class CtrlCat
+class Name1
+class Name2
+class Name3
+
+ChatRoom <|-- Dogorithm
+ChatRoom <|-- CtrlCat
+Users <|-- Name1
+Users <|-- Name2
+Users <|-- Name3
+Users --> ChatRoom : "participates in"
+ChatRoom --> Users : "manages *"
+@enduml

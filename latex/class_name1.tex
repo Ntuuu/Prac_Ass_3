@@ -1,0 +1,60 @@
+\doxysection{Name1 Class Reference}
+\hypertarget{class_name1}{}\label{class_name1}\index{Name1@{Name1}}
+
+
+Example user subclass\+: \doxylink{class_name1}{Name1}.  
+
+
+
+
+{\ttfamily \#include $<$Mediator.\+h$>$}
+
+
+
+Inheritance diagram for Name1\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_name1__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Name1\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_name1__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_users}{Users}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_users_a3779c3841ef58347cf409f1ee6f43407}{send}} (std\+::string message, \mbox{\hyperlink{class_chat_room}{Chat\+Room}} room)
+\begin{DoxyCompactList}\small\item\em Sends a message to a chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_users_a0caa05e490d44e91f5fdab04646f0ffc}{receive}} (std\+::string message, \mbox{\hyperlink{class_users}{Users}} from\+User, \mbox{\hyperlink{class_chat_room}{Chat\+Room}} room)
+\begin{DoxyCompactList}\small\item\em Receives a message from another user via the chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_users_a5806f3457cac7f5eb2fd262d0854bc98}{add\+Command}} (\mbox{\hyperlink{class_command}{Command}} command)
+\begin{DoxyCompactList}\small\item\em Adds a command to the user\textquotesingle{}s command queue. \end{DoxyCompactList}\item 
+void {\bfseries execute\+All} ()
+\begin{DoxyCompactList}\small\item\em Executes all commands in the user\textquotesingle{}s command queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_users}{Users}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chat_room}{Chat\+Room}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_users_a36cc4a5b33420ca6ac0632d8f78e7af9}{chat\+Rooms}}
+\item 
+std\+::string \mbox{\hyperlink{class_users_abfa55c64dfc5548eb796e163633404d2}{name}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_command}{Command}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_users_aef1d305e70991e135a32d75a2796db9c}{command\+Queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Example user subclass\+: \doxylink{class_name1}{Name1}. 
+
+Demonstrates how custom user types can be defined. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mediator_8h}{Mediator.\+h}}\end{DoxyCompactItemize}
