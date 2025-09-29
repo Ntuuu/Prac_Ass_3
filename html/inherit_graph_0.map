@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_chat_room.html" title="Abstract base class representing a chat room mediator." alt="" coords="5,31,90,56"/>
+<area shape="rect" id="Node000001" href="$class_ctrl_cat.html" title="A specific chat room implementation: CtrlCat." alt="" coords="147,5,210,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="105,30,146,22,147,27,106,35"/>
+<area shape="rect" id="Node000002" href="$class_dogorithm.html" title="A specific chat room implementation: Dogorithm." alt="" coords="138,55,219,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="106,51,138,57,137,63,105,57"/>
+</map>

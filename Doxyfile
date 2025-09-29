@@ -1,0 +1,17 @@
+PROJECT_NAME           = "ChatRoom UML Example"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = .
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = YES
+EXTRACT_ALL            = YES
+
+HAVE_DOT               = YES
+DOT_PATH               = /opt/homebrew/bin
+COLLABORATION_GRAPH    = YES
+DOT_IMAGE_FORMAT       = svg
+UML_LOOK               = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+PLANTUML_JAR_PATH      = /Users/ntuthukombatha/LocalRepositories/COS214_Prac_Assignments/Prac_Ass_3/plantuml.jar

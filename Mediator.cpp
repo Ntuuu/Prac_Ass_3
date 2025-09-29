@@ -1,5 +1,24 @@
 #include "Mediator.h"
 
+void Users::addCommand(Command command){
+    commandQueue.push_back(&command);
+}
+void Users::executeAll(){
+    for(Command* cmd : commandQueue){
+        cmd->execute();
+    }
+    commandQueue.clear();
+}
+
+void Users::send(std::string message, ChatRoom room){
+    Command* cmd = new SendMessageCommand(&room, this, message);
+    addCommand(*cmd);
+    Command* logCmd = new LogMessageCommand(&room, this, message);
+    addCommand(*logCmd);
+
+    executeAll();
+}
+
 int ChatRoom::incrementNumUsers(){
     numUsers++;
     return numUsers;

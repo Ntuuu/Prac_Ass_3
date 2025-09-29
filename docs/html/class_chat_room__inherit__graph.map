@@ -1,0 +1,7 @@
+<map id="ChatRoom" name="ChatRoom">
+<area shape="rect" id="Node000001" title="Abstract base class representing a chat room mediator." alt="" coords="5,5,157,194"/>
+<area shape="rect" id="Node000002" href="$class_ctrl_cat.html" title="A specific chat room implementation: CtrlCat." alt="" coords="12,242,65,308"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,208,49,242,44,241,52,207"/>
+<area shape="rect" id="Node000003" href="$class_dogorithm.html" title="A specific chat room implementation: Dogorithm." alt="" coords="89,242,159,308"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,207,119,241,114,242,105,208"/>
+</map>

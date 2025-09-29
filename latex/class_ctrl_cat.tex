@@ -1,0 +1,56 @@
+\doxysection{Ctrl\+Cat Class Reference}
+\hypertarget{class_ctrl_cat}{}\label{class_ctrl_cat}\index{CtrlCat@{CtrlCat}}
+
+
+A specific chat room implementation\+: \doxylink{class_ctrl_cat}{Ctrl\+Cat}.  
+
+
+
+
+{\ttfamily \#include $<$Mediator.\+h$>$}
+
+
+
+Inheritance diagram for Ctrl\+Cat\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_ctrl_cat__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ctrl\+Cat\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_ctrl_cat__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_chat_room}{Chat\+Room}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_chat_room_a0f6e571d9a90e2bd89a3538e2a1a4f4a}{send\+Message}} (std\+::string message, \mbox{\hyperlink{class_users}{Users}} from\+User)
+\begin{DoxyCompactList}\small\item\em Sends a message from one user to all others in the chat room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_chat_room_a6d7727f91248c9da14c0be621e62a2ce}{save\+Message}} (std\+::string message, \mbox{\hyperlink{class_users}{Users}} from\+User)
+\begin{DoxyCompactList}\small\item\em Saves a message into the chat history. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_chat_room_a53ec6b8eb51c12c933dd40dc4394ebcb}{remove\+User}} (\mbox{\hyperlink{class_users}{Users}} user)
+\begin{DoxyCompactList}\small\item\em Removes a user from the chat room. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{class_users}{Users}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_chat_room_aa7a68a26fce9a0113616063016569367}{get\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the list of users in the chat room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_chat_room_a3cd2c834369a64654e0afcaa85c45722}{increment\+Num\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Increments the total number of users. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_chat_room_a0fd34d885c1b8c31d7fa078d685cf7ee}{get\+Num\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current number of users in the chat room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A specific chat room implementation\+: \doxylink{class_ctrl_cat}{Ctrl\+Cat}. 
+
+Provides a custom implementation of user registration. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mediator_8h}{Mediator.\+h}}\item 
+Mediator.\+cpp\end{DoxyCompactItemize}
