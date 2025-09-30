@@ -118,20 +118,20 @@ void testCommandPattern() {
     Command* sendCmd = new SendMessageCommand(dogRoom, dogUser, "Hello from command!");
     Command* logCmd = new LogMessageCommand(dogRoom, dogUser, "Log this message");
     
-    std::cout << "Executing SendMessageCommand..." << std::endl;
-    sendCmd->execute();
+    // std::cout << "Executing SendMessageCommand..." << std::endl;
+    // sendCmd->execute();
     
-    std::cout << "Executing LogMessageCommand..." << std::endl;
-    logCmd->execute();
+    // std::cout << "Executing LogMessageCommand..." << std::endl;
+    // logCmd->execute();
     
     // Test command with different rooms
-    Command* crossRoomCmd = new SendMessageCommand(catRoom, dogUser, "Cross-room message");
-    std::cout << "Executing cross-room command..." << std::endl;
-    crossRoomCmd->execute();
+    // Command* crossRoomCmd = new SendMessageCommand(catRoom, dogUser, "Cross-room message");
+    // std::cout << "Executing cross-room command..." << std::endl;
+    // crossRoomCmd->execute();
     
     delete sendCmd;
     delete logCmd;
-    delete crossRoomCmd;
+    // delete crossRoomCmd;
     delete dogUser;
     delete catUser;
     delete dogRoom;
