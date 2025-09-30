@@ -1,7 +1,0 @@
-<map id="Name3" name="Name3">
-<area shape="rect" id="Node000001" title="Example user subclass: Name3." alt="" coords="55,502,108,569"/>
-<area shape="rect" id="Node000002" href="$db/d7f/class_users.html" title="Represents a user that participates in a chat room." alt="" coords="22,305,141,453"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,468,84,502,79,502,79,468"/>
-<area shape="rect" id="Node000003" href="$df/d67/class_chat_room.html" title="Abstract base class representing a chat room mediator." alt="" coords="5,5,157,234"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,234,84,288,79,288,79,234"/>
-</map>

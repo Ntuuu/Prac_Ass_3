@@ -1,3 +1,6 @@
+#ifndef MEDIATOR_H
+#define MEDIATOR_H
+
 #include <string>
 #include <vector>
 #include <map>
@@ -5,6 +8,8 @@
 #include <iostream>
 
 #include "Command.h"
+
+#pragma once
 
 /**
  * @file
@@ -26,7 +31,7 @@ public:
      * 
      * @param user The user to be registered.
      */
-    virtual void registerUser(Users user) = 0;
+    virtual void registerUser(Users* user) = 0;
 
     /**
      * @brief Sends a message from one user to all others in the chat room.
@@ -49,7 +54,7 @@ public:
      * 
      * @param user The user to be removed.
      */
-    virtual void removeUser(Users user) = 0;
+    virtual void removeUser(Users* user) = 0;
 
     /**
      * @brief Retrieves the list of users in the chat room.
@@ -141,6 +146,15 @@ protected:
  * Currently inherits ChatRoom without custom behavior.
  */
 class Dogorithm : public ChatRoom {
+     /**
+     * @brief Registers a user into the Dogorithm chat room.
+     * 
+     * @param user The user to be registered.
+     */
+    public:
+    void registerUser(Users* user) override;
+
+    void removeUser(Users* user) override;
 
 };
 
@@ -156,9 +170,10 @@ class CtrlCat : public ChatRoom {
      * 
      * @param user The user to be registered.
      */
-    void registerUser(Users user) override;
+    public:
+    void registerUser(Users* user) override;
 
-    void removeUser(Users user) override;
+    void removeUser(Users* user) override;
 };
 
 /**
@@ -190,3 +205,5 @@ class CatnDog : public Users {
     public:
     CatnDog(std::list<ChatRoom*> chatRooms, std::string name) : Users(chatRooms, name) {}
 };
+
+#endif // MEDIATOR_H

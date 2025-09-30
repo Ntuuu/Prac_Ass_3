@@ -1,3 +1,6 @@
+#ifndef COMMAND_H
+#define COMMAND_H
+
 #pragma once
 #include <string>
 
@@ -46,3 +49,5 @@ class LogMessageCommand : public Command {
 //         }
 //         void execute() override;
 // };
+
+#endif // COMMAND_H

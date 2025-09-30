@@ -1,8 +1,0 @@
-<map id="Command" name="Command">
-<area shape="rect" id="Node000001" title=" " alt="" coords="31,524,131,611"/>
-<area shape="rect" id="Node000002" href="$df/d67/class_chat_room.html" title="Abstract base class representing a chat room mediator." alt="" coords="5,5,157,234"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,234,73,340,74,453,78,507,73,508,69,453,68,340,71,234"/>
-<area shape="rect" id="Node000003" href="$db/d7f/class_users.html" title="Represents a user that participates in a chat room." alt="" coords="159,305,278,453"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="144,233,174,289,170,292,139,235"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,454,125,512,120,509,163,451"/>
-</map>

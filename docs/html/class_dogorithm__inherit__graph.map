@@ -1,5 +1,0 @@
-<map id="Dogorithm" name="Dogorithm">
-<area shape="rect" id="Node000001" title="A specific chat room implementation: Dogorithm." alt="" coords="46,242,117,308"/>
-<area shape="rect" id="Node000002" href="$class_chat_room.html" title="Abstract base class representing a chat room mediator." alt="" coords="5,5,157,194"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,208,84,242,79,242,79,208"/>
-</map>

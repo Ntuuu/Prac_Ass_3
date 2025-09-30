@@ -1,3 +1,6 @@
+#ifndef FACTORY_H
+#define FACTORY_H
+
 #include "Mediator.h"
 
 
@@ -31,3 +34,10 @@ class CatnDogFactory : public UserFactory {
         return new CatnDog(chatRooms, name);
     }
 };
+
+class Signup {
+    public:
+    void addUser(UserFactory* factory, std::string& type, std::list<ChatRoom*> chatRooms);
+};
+
+#endif // FACTORY_H

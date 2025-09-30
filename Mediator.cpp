@@ -86,13 +86,37 @@ void Users::receive(std::string message, Users fromUser, ChatRoom* room){
 
 }
 
+// In Mediator.cpp or wherever Dogorithm/CtrlCat are implemented
+// Dogorithm::Dogorithm() : ChatRoom() {
+//     // Initialize the users list in the ChatRoom base class constructor
+//     std::cout << "Dogorithm constructor - users list initialized" << std::endl;
+// }
 
-void CtrlCat::registerUser(Users user){
-    
-    Users* newUser = &user;
+// CtrlCat::CtrlCat() : ChatRoom() {
+//     // Initialize the users list in the ChatRoom base class constructor
+//     std::cout << "CtrlCat constructor - users list initialized" << std::endl;
+// }
 
-    getUsers()->push_back(newUser);
-   
+void Dogorithm::registerUser(Users* user){
+if (!user) {
+            std::cout << "Error: Cannot register null user" << std::endl;
+            return;
+        }
+        
+        if (!getUsers()) {
+            std::cout << "Error: Users list is not initialized" << std::endl;
+            return;
+        }
+        
+        getUsers()->push_back(user);
+        incrementNumUsers();
+        std::cout << "Registered user: " << user->getName() << std::endl;
+}
+
+void CtrlCat::registerUser(Users* user){
+
+    getUsers()->push_back(user);
+    incrementNumUsers();
     // Users* users = getUsers();
     // Users* newUser = &user;
 
@@ -107,11 +131,44 @@ void CtrlCat::registerUser(Users user){
 
 }
 
-void CtrlCat::removeUser(Users user){
+void Dogorithm::removeUser(Users* user){
 
     // auto it = getUsers()->begin();
+    // while (it != getUsers()->end()) {
+    //     if (*it == user) {
+    //         it = getUsers()->erase(it);
+    //         decrementNumUsers();
+    //     } else {
+    //         ++it;
+    //     }
+    // }
+
+    //  auto getValueAt = [](const std::list<int>& lst, size_t pos) -> int {
+    //     if (pos >= lst.size()) {
+    //         throw std::out_of_range("Position out of range");
+    //     }
+    //     auto it = lst.begin();
+    //     std::advance(it, pos);
+        
     
     
+    // for(int i = 0; i < getNumUsers(); i++){
+    //     if(user == it.)  // Compare user with the current user in the list
+    //     std::advance(it, 1);
+}
+
+void CtrlCat::removeUser(Users* user){
+
+    // auto it = getUsers()->begin();
+    // while (it != getUsers()->end()) {
+    //     if (*it == user) {
+    //         it = getUsers()->erase(it);
+    //         decrementNumUsers();
+    //     } else {
+    //         ++it;
+    //     }
+    // }
+
     //  auto getValueAt = [](const std::list<int>& lst, size_t pos) -> int {
     //     if (pos >= lst.size()) {
     //         throw std::out_of_range("Position out of range");

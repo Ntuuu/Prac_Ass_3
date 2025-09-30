@@ -7,7 +7,7 @@ SRCS := $(wildcard *.cpp)
 OBJS := $(SRCS:.cpp=.o)
 
 # Default target name (main executable)
-TARGET = DemoMain
+TARGET = TestingMain
 
 # Default build
 all: $(TARGET)
